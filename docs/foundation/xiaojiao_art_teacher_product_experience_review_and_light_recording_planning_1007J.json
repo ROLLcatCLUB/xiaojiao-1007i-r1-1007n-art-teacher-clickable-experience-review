@@ -1,0 +1,90 @@
+{
+  "stage": "1007J_ART_TEACHER_PRODUCT_EXPERIENCE_REVIEW_AND_LIGHT_RECORDING_PLANNING",
+  "final_status": "XIAOJIAO_ART_TEACHER_PRODUCT_EXPERIENCE_REVIEW_AND_LIGHT_RECORDING_PLANNING_PASS",
+  "package": "1007I_R1_TO_1007N_ART_TEACHER_CLICKABLE_EXPERIENCE_MILESTONE_PACKAGE",
+  "current_identity": "teacher_work_state_driven_intelligent_organization_system",
+  "payload": {
+    "experience_review": {
+      "light_entry_is_light": true,
+      "lesson_focus_organizes_work": true,
+      "agent_note_attached_to_work_object": true,
+      "intent_bar_not_chatbot": true,
+      "simple_intent_direct_action": true,
+      "complex_intent_think_confirm_execute": true,
+      "candidate_patch_teacher_review": true,
+      "teacher_review_gate_clear": true,
+      "light_recording_not_form_filling": true,
+      "avoids_competitor_identity_slide": true
+    },
+    "intent_bar_policy": {
+      "names": [
+        "Intent Bar",
+        "对小教说一句",
+        "轻意图通道"
+      ],
+      "is_chat_box": false,
+      "shows_long_chat_history": false,
+      "binds_current_work_object": true,
+      "simple_intent_path": "action_gate_direct_execute",
+      "complex_intent_path": "thinking_then_confirm",
+      "disappears_after_execution": true,
+      "generated_outputs_go_to_teacher_review": true,
+      "replaces_main_work_surface": false,
+      "default_main_interface": false
+    },
+    "light_recording_plan": {
+      "sources": [
+        "auto_event",
+        "teacher_quick_mark",
+        "teacher_short_note",
+        "work_object_evidence"
+      ],
+      "evidence_event_schema": [
+        "event_id",
+        "timestamp",
+        "actor_type",
+        "actor_id",
+        "work_object_type",
+        "work_object_id",
+        "event_type",
+        "content_summary",
+        "source",
+        "confidence",
+        "teacher_review_required",
+        "privacy_level",
+        "exportable_candidate"
+      ],
+      "principles": [
+        "not_teacher_form_filling",
+        "does_not_interrupt_teaching",
+        "ai_observation_candidate_only",
+        "teacher_has_confirmation_right",
+        "evidence_serves_next_teaching_action"
+      ]
+    }
+  },
+  "boundary_flags": {
+    "provider_called": false,
+    "model_called": false,
+    "api_key_configured": false,
+    "real_database_written": false,
+    "database_written": false,
+    "real_memory_written": false,
+    "memory_written": false,
+    "Feishu_written": false,
+    "formal_export_created": false,
+    "real_frontend_runtime_modified": false,
+    "frontend_runtime_modified": false,
+    "production_dependency_installed": false,
+    "real_resource_library_connected": false,
+    "teacher_control_runtime_entered": false,
+    "public_display_runtime_entered": false,
+    "student_side_runtime_entered": false,
+    "production_generation_performed": false,
+    "formal_writeback_performed": false,
+    "formal_apply_performed": false,
+    "auto_teacher_approval_performed": false,
+    "teacher_review_required": true
+  },
+  "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX"
+}
