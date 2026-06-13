@@ -1,0 +1,23 @@
+{
+  "stage": "1007K_ART_TEACHER_CLICKABLE_PREVIEW_WITH_INTENT_BAR",
+  "final_status": "XIAOJIAO_ART_TEACHER_CLICKABLE_PREVIEW_WITH_INTENT_BAR_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K.zip",
+  "zip_sha256": "2999D37FC7AF87591D7FB0A617E3E789007CF8718867A070DACD0C25AA38EED1",
+  "zip_entry_count": 10,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K.md",
+    "docs/foundation/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K.json",
+    "samples/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K/index.html",
+    "samples/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K/preview_state_1007K.json",
+    "samples/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K/preview_events_1007K.json",
+    "samples/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K/intent_bar_trace_1007K.json",
+    "docs/audit/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K_result.json",
+    "docs/audit/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K_report.md",
+    "scripts/validate_xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K.py",
+    "docs/audit_packages/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007K_ART_TEACHER_CLICKABLE_PREVIEW_WITH_INTENT_BAR_CHECKS_OK"
+}
