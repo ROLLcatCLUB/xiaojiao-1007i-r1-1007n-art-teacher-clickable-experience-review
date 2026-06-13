@@ -1,0 +1,68 @@
+{
+  "stage": "1007N_ART_TEACHER_REAL_EXPERIENCE_MILESTONE_REVIEW_PACKAGE",
+  "final_status": "XIAOJIAO_ART_TEACHER_REAL_EXPERIENCE_MILESTONE_REVIEW_PACKAGE_PASS",
+  "package": "1007I_R1_TO_1007N_ART_TEACHER_CLICKABLE_EXPERIENCE_MILESTONE_PACKAGE",
+  "current_identity": "teacher_work_state_driven_intelligent_organization_system",
+  "payload": {
+    "milestone_summary": "1007I_R1-1007N moves Xiaojiao from static productized preview to locally clickable art teacher experience preview.",
+    "what_user_can_experience": [
+      "今日轻入口",
+      "单课焦点",
+      "对小教说一句",
+      "简单意图直执行",
+      "复杂意图确认",
+      "学习单候选",
+      "教师审核门",
+      "轻记录"
+    ],
+    "what_is_not_real_yet": [
+      "no real provider/model",
+      "no real database",
+      "no real memory",
+      "no real resource library",
+      "no real frontend runtime",
+      "no real formal apply",
+      "no real export"
+    ],
+    "user_review_questions": [
+      "入口是否轻",
+      "Intent Bar 是否自然",
+      "小教是否像在组织工作，而不是聊天机器人",
+      "单课焦点是否减负",
+      "学习单候选是否有审核逻辑",
+      "轻记录是否不打扰",
+      "是否可以进入 provider sandbox",
+      "是否可以进入真实前端 preview route"
+    ],
+    "next_stage_options": [
+      "1008A_PROVIDER_SANDBOX_PLANNING",
+      "1010A_REAL_FRONTEND_PREVIEW_ROUTE",
+      "1007O_PRODUCT_EXPERIENCE_POLISH"
+    ],
+    "recommended_next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX"
+  },
+  "boundary_flags": {
+    "provider_called": false,
+    "model_called": false,
+    "api_key_configured": false,
+    "real_database_written": false,
+    "database_written": false,
+    "real_memory_written": false,
+    "memory_written": false,
+    "Feishu_written": false,
+    "formal_export_created": false,
+    "real_frontend_runtime_modified": false,
+    "frontend_runtime_modified": false,
+    "production_dependency_installed": false,
+    "real_resource_library_connected": false,
+    "teacher_control_runtime_entered": false,
+    "public_display_runtime_entered": false,
+    "student_side_runtime_entered": false,
+    "production_generation_performed": false,
+    "formal_writeback_performed": false,
+    "formal_apply_performed": false,
+    "auto_teacher_approval_performed": false,
+    "teacher_review_required": true
+  },
+  "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX"
+}
