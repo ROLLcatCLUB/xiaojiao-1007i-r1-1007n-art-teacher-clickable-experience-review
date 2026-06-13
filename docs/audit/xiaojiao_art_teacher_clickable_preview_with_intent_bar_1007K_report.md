@@ -30,3 +30,15 @@ provider_called=false
 ````
 
 Fixes: generation thinking feedback, dead-button responses, related-card disabled state, redesign warning after draft confirmation, candidate edit copy alignment, focus step indicator, timeline labels, Intent Bar scrim/padding, focus-visible and Escape/overlay close.
+
+
+## 1007K_R3 Style Preset Switcher
+
+```text
+1007K_R3_STYLE_PRESET_SWITCHER_APPLIED
+style_presets=minimax,calm,compact
+real_frontend_modified=false
+provider_called=false
+```
+
+Adds an in-page style switcher so the same clickable workflow can be compared across multiple visual directions without overwriting the interaction model.
