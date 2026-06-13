@@ -1,0 +1,22 @@
+{
+  "events": [
+    "open_light_entry",
+    "click_now_process",
+    "enter_lesson_focus",
+    "open_intent_bar",
+    "simple_intent_inquiry_shorter",
+    "update_inquiry_minutes",
+    "complex_intent_redesign_lesson",
+    "thinking",
+    "confirm_understanding",
+    "execute_and_disappear",
+    "generate_handout_candidate",
+    "semantic_confirmation",
+    "select_purpose_and_difficulty",
+    "candidate_preview",
+    "adopt_candidate",
+    "teacher_review_gate",
+    "quick_record_tag",
+    "stop_at_teacher_review_required_process_record_candidate"
+  ]
+}
