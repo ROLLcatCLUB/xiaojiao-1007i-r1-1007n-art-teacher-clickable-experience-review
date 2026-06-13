@@ -1,0 +1,21 @@
+{
+  "stage": "1007J_ART_TEACHER_PRODUCT_EXPERIENCE_REVIEW_AND_LIGHT_RECORDING_PLANNING",
+  "final_status": "XIAOJIAO_ART_TEACHER_PRODUCT_EXPERIENCE_REVIEW_AND_LIGHT_RECORDING_PLANNING_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J.zip",
+  "zip_sha256": "A2197392BB673F53FCB316DA9688104CBDDE95B686A7A10410301502E3E98577",
+  "zip_entry_count": 8,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J.md",
+    "docs/foundation/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J.json",
+    "samples/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J/light_recording_planning_fixture_1007J.json",
+    "samples/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J/intent_bar_policy_1007J.json",
+    "docs/audit/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J_result.json",
+    "docs/audit/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J_report.md",
+    "scripts/validate_xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J.py",
+    "docs/audit_packages/xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007J_ART_TEACHER_PRODUCT_EXPERIENCE_REVIEW_AND_LIGHT_RECORDING_PLANNING_CHECKS_OK"
+}
