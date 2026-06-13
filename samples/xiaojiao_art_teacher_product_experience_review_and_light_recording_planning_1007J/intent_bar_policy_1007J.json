@@ -1,0 +1,16 @@
+{
+  "names": [
+    "Intent Bar",
+    "对小教说一句",
+    "轻意图通道"
+  ],
+  "is_chat_box": false,
+  "shows_long_chat_history": false,
+  "binds_current_work_object": true,
+  "simple_intent_path": "action_gate_direct_execute",
+  "complex_intent_path": "thinking_then_confirm",
+  "disappears_after_execution": true,
+  "generated_outputs_go_to_teacher_review": true,
+  "replaces_main_work_surface": false,
+  "default_main_interface": false
+}
