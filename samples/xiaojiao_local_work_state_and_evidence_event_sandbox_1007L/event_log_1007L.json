@@ -1,0 +1,12 @@
+{
+  "event_log": [
+    "open_workbench",
+    "open_lesson_focus",
+    "intent_bar_simple_action",
+    "intent_bar_complex_confirmed",
+    "generate_handout_candidate",
+    "candidate_preview_opened",
+    "teacher_review_gate_opened",
+    "quick_mark_recorded"
+  ]
+}
