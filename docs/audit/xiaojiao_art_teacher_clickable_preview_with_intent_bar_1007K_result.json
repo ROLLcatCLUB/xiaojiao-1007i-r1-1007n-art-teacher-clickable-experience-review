@@ -34,7 +34,20 @@
     "zip_minus_manifest": []
   },
   "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX",
-  "reference_style_patch": "1007K_R1_INTENT_BAR_REFERENCE_STYLE_APPLIED",
+  "reference_style_patch": "1007K_R2_PRODUCT_HIERARCHY_AND_INTERACTION_FIX_APPLIED",
   "reference_style_patch_scope": "index_html_only_plus_zip_readme_sha_refresh",
-  "teacher_facing_style_updated": true
+  "teacher_facing_style_updated": true,
+  "interaction_fixes": [
+    "generation_thinking_feedback",
+    "dead_button_fixed",
+    "disabled_related_cards",
+    "defer_feedback_path",
+    "redesign_after_confirm_warning",
+    "candidate_edit_copy_aligned",
+    "focus_step_indicator",
+    "contextual_intent_bar_visibility",
+    "timeline_labels",
+    "intent_open_scrim_and_padding",
+    "focus_visible_and_esc_close"
+  ]
 }
