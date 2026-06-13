@@ -1,0 +1,30 @@
+{
+  "sources": [
+    "auto_event",
+    "teacher_quick_mark",
+    "teacher_short_note",
+    "work_object_evidence"
+  ],
+  "evidence_event_schema": [
+    "event_id",
+    "timestamp",
+    "actor_type",
+    "actor_id",
+    "work_object_type",
+    "work_object_id",
+    "event_type",
+    "content_summary",
+    "source",
+    "confidence",
+    "teacher_review_required",
+    "privacy_level",
+    "exportable_candidate"
+  ],
+  "principles": [
+    "not_teacher_form_filling",
+    "does_not_interrupt_teaching",
+    "ai_observation_candidate_only",
+    "teacher_has_confirmation_right",
+    "evidence_serves_next_teaching_action"
+  ]
+}
