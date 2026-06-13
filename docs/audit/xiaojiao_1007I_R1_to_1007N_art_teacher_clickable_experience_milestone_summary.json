@@ -1,0 +1,97 @@
+{
+  "package": "1007I_R1_TO_1007N_ART_TEACHER_CLICKABLE_EXPERIENCE_MILESTONE_PACKAGE",
+  "overall_status": "1007I_R1_TO_1007N_ART_TEACHER_CLICKABLE_EXPERIENCE_MILESTONE_PASS",
+  "stages": [
+    {
+      "stage": "1007I_R1",
+      "slug": "xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync",
+      "final_status": "XIAOJIAO_1007I_R1_SHA_RECORD_SYNC_FIX_PASS",
+      "zip_entry_count": 6,
+      "zip_sha256": "C00BA7B1498D8B56A62CBF82684E842637F210C580F67BC5C5CC7CF9340C8059",
+      "validator_no_arg": "PASS",
+      "validator_root": "PASS",
+      "manifest_minus_zip": [],
+      "zip_minus_manifest": []
+    },
+    {
+      "stage": "1007J",
+      "slug": "xiaojiao_art_teacher_product_experience_review_and_light_recording_planning_1007J",
+      "final_status": "XIAOJIAO_ART_TEACHER_PRODUCT_EXPERIENCE_REVIEW_AND_LIGHT_RECORDING_PLANNING_PASS",
+      "zip_entry_count": 8,
+      "zip_sha256": "8EC235E7049EF900DAE5FCBB34A68383265460065399D34A7BFD2D19DB07B166",
+      "validator_no_arg": "PASS",
+      "validator_root": "PASS",
+      "manifest_minus_zip": [],
+      "zip_minus_manifest": []
+    },
+    {
+      "stage": "1007K",
+      "slug": "xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K",
+      "final_status": "XIAOJIAO_ART_TEACHER_CLICKABLE_PREVIEW_WITH_INTENT_BAR_PASS",
+      "zip_entry_count": 10,
+      "zip_sha256": "AE169D22536763B447CC3C0CFE717F5FE825E282D0D3B2D141A6A247FEC897F5",
+      "validator_no_arg": "PASS",
+      "validator_root": "PASS",
+      "manifest_minus_zip": [],
+      "zip_minus_manifest": []
+    },
+    {
+      "stage": "1007L",
+      "slug": "xiaojiao_local_work_state_and_evidence_event_sandbox_1007L",
+      "final_status": "XIAOJIAO_LOCAL_WORK_STATE_AND_EVIDENCE_EVENT_SANDBOX_PASS",
+      "zip_entry_count": 9,
+      "zip_sha256": "16A1EEF3610298EE8A4E6783AF9603CB95AD532CF7114155CFD9CBA2DD628850",
+      "validator_no_arg": "PASS",
+      "validator_root": "PASS",
+      "manifest_minus_zip": [],
+      "zip_minus_manifest": []
+    },
+    {
+      "stage": "1007M",
+      "slug": "xiaojiao_clickable_preview_usability_smoke_and_trace_1007M",
+      "final_status": "XIAOJIAO_CLICKABLE_PREVIEW_USABILITY_SMOKE_AND_TRACE_PASS",
+      "zip_entry_count": 7,
+      "zip_sha256": "2AB67392594667502BD88DD632ED8961122BE498CA4BDC53E98FA015DD1214C5",
+      "validator_no_arg": "PASS",
+      "validator_root": "PASS",
+      "manifest_minus_zip": [],
+      "zip_minus_manifest": []
+    },
+    {
+      "stage": "1007N",
+      "slug": "xiaojiao_art_teacher_real_experience_milestone_review_package_1007N",
+      "final_status": "XIAOJIAO_ART_TEACHER_REAL_EXPERIENCE_MILESTONE_REVIEW_PACKAGE_PASS",
+      "zip_entry_count": 7,
+      "zip_sha256": "0BB75F49C6D6A6BD2E3A1C59BD6BB2304DBAA2425B64F42222C32CFD8973A5C5",
+      "validator_no_arg": "PASS",
+      "validator_root": "PASS",
+      "manifest_minus_zip": [],
+      "zip_minus_manifest": []
+    }
+  ],
+  "clickable_entry": "samples/xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K/index.html",
+  "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX",
+  "boundary_flags": {
+    "provider_called": false,
+    "model_called": false,
+    "api_key_configured": false,
+    "real_database_written": false,
+    "database_written": false,
+    "real_memory_written": false,
+    "memory_written": false,
+    "Feishu_written": false,
+    "formal_export_created": false,
+    "real_frontend_runtime_modified": false,
+    "frontend_runtime_modified": false,
+    "production_dependency_installed": false,
+    "real_resource_library_connected": false,
+    "teacher_control_runtime_entered": false,
+    "public_display_runtime_entered": false,
+    "student_side_runtime_entered": false,
+    "production_generation_performed": false,
+    "formal_writeback_performed": false,
+    "formal_apply_performed": false,
+    "auto_teacher_approval_performed": false,
+    "teacher_review_required": true
+  }
+}
