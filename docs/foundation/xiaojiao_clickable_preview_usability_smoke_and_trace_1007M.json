@@ -1,0 +1,138 @@
+{
+  "stage": "1007M_CLICKABLE_PREVIEW_USABILITY_SMOKE_AND_TRACE",
+  "final_status": "XIAOJIAO_CLICKABLE_PREVIEW_USABILITY_SMOKE_AND_TRACE_PASS",
+  "package": "1007I_R1_TO_1007N_ART_TEACHER_CLICKABLE_EXPERIENCE_MILESTONE_PACKAGE",
+  "current_identity": "teacher_work_state_driven_intelligent_organization_system",
+  "payload": {
+    "smoke_checklist": [
+      {
+        "step": 1,
+        "action": "load preview",
+        "expected_state": "surface=light_entry",
+        "pass": true
+      },
+      {
+        "step": 2,
+        "action": "click 现在处理",
+        "expected_state": "surface=lesson_focus",
+        "pass": true
+      },
+      {
+        "step": 3,
+        "action": "enter lesson focus",
+        "expected_state": "primary_object=art_lesson_design",
+        "pass": true
+      },
+      {
+        "step": 4,
+        "action": "use simple intent 探究短一点",
+        "expected_state": "inquiry_section_minutes=18",
+        "pass": true
+      },
+      {
+        "step": 5,
+        "action": "verify section minutes changed",
+        "expected_state": "display_section_minutes increased",
+        "pass": true
+      },
+      {
+        "step": 6,
+        "action": "use complex intent 重新设计这节课",
+        "expected_state": "intent_bar_state=thinking",
+        "pass": true
+      },
+      {
+        "step": 7,
+        "action": "verify thinking + confirm path",
+        "expected_state": "confirmation visible",
+        "pass": true
+      },
+      {
+        "step": 8,
+        "action": "click generate handout candidate",
+        "expected_state": "semantic_confirmation visible",
+        "pass": true
+      },
+      {
+        "step": 9,
+        "action": "select purpose/difficulty",
+        "expected_state": "handout_difficulty=simple",
+        "pass": true
+      },
+      {
+        "step": 10,
+        "action": "open candidate preview",
+        "expected_state": "candidate preview visible",
+        "pass": true
+      },
+      {
+        "step": 11,
+        "action": "click adopt",
+        "expected_state": "teacher_review_gate visible",
+        "pass": true
+      },
+      {
+        "step": 12,
+        "action": "open teacher review gate",
+        "expected_state": "teacher_review_required=true",
+        "pass": true
+      },
+      {
+        "step": 13,
+        "action": "click quick record tag",
+        "expected_state": "process_record_candidate exists",
+        "pass": true
+      },
+      {
+        "step": 14,
+        "action": "verify teacher_review_required remains true",
+        "expected_state": "teacher_review_required=true",
+        "pass": true
+      },
+      {
+        "step": 15,
+        "action": "verify formal_apply_performed remains false",
+        "expected_state": "formal_apply_performed=false",
+        "pass": true
+      }
+    ],
+    "ux_risk_notes": [
+      "Intent Bar may still feel command-like if quick terms are too narrow.",
+      "Teacher review gate wording should stay professional but light.",
+      "Light recording should not look like a required form."
+    ],
+    "issues_to_review_by_user": [
+      "入口是否轻",
+      "Intent Bar 是否自然",
+      "轻记录是否不打扰",
+      "是否能进入 provider sandbox",
+      "是否能进入真实前端 preview route"
+    ],
+    "pass": true,
+    "real_teacher_professional_judgement_simulated": false
+  },
+  "boundary_flags": {
+    "provider_called": false,
+    "model_called": false,
+    "api_key_configured": false,
+    "real_database_written": false,
+    "database_written": false,
+    "real_memory_written": false,
+    "memory_written": false,
+    "Feishu_written": false,
+    "formal_export_created": false,
+    "real_frontend_runtime_modified": false,
+    "frontend_runtime_modified": false,
+    "production_dependency_installed": false,
+    "real_resource_library_connected": false,
+    "teacher_control_runtime_entered": false,
+    "public_display_runtime_entered": false,
+    "student_side_runtime_entered": false,
+    "production_generation_performed": false,
+    "formal_writeback_performed": false,
+    "formal_apply_performed": false,
+    "auto_teacher_approval_performed": false,
+    "teacher_review_required": true
+  },
+  "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX"
+}
