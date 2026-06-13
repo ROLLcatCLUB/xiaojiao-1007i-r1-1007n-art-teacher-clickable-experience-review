@@ -18,3 +18,15 @@ provider_called=false
 ```
 
 The clickable preview page was restyled to follow the supplied Intent Bar interaction pattern: collapsed bottom bar, object-bound input, thinking bubble, confirmation bubble, done feedback, and disappearance after execution.
+
+
+## 1007K_R2 Product Hierarchy And Interaction Fix
+
+```text
+1007K_R2_PRODUCT_HIERARCHY_AND_INTERACTION_FIX_APPLIED
+updated=index_html_only
+real_frontend_modified=false
+provider_called=false
+````
+
+Fixes: generation thinking feedback, dead-button responses, related-card disabled state, redesign warning after draft confirmation, candidate edit copy alignment, focus step indicator, timeline labels, Intent Bar scrim/padding, focus-visible and Escape/overlay close.
