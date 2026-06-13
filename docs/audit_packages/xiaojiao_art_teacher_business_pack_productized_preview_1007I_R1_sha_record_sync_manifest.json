@@ -1,0 +1,19 @@
+{
+  "stage": "1007I_R1_SHA_RECORD_SYNC_FIX",
+  "final_status": "XIAOJIAO_1007I_R1_SHA_RECORD_SYNC_FIX_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.zip",
+  "zip_sha256": "A9DCB92C5606F27AE709632B32E45B0EB85F720E2337952A6B08BF2C10E1700F",
+  "zip_entry_count": 6,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.md",
+    "docs/foundation/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.json",
+    "docs/audit/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync_result.json",
+    "docs/audit/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync_report.md",
+    "scripts/validate_xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.py",
+    "docs/audit_packages/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007I_R1_SHA_RECORD_SYNC_FIX_CHECKS_OK"
+}
