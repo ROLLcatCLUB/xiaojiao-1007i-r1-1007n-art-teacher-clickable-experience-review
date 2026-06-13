@@ -1,0 +1,46 @@
+{
+  "stage": "1007I_R1_SHA_RECORD_SYNC_FIX",
+  "final_status": "XIAOJIAO_1007I_R1_SHA_RECORD_SYNC_FIX_PASS",
+  "pass": true,
+  "marker": "ALL_1007I_R1_SHA_RECORD_SYNC_FIX_CHECKS_OK",
+  "payload": {
+    "fix": "sha_record_sync_only",
+    "actual_zip_sha256": "4681C82979772F7236C383656DA9B1442A2CD1E11C6682B45D8ABBA7EC2B2361",
+    "business_preview_content_changed": false,
+    "four_html_states_changed": false,
+    "render_directive_business_structure_changed": false,
+    "final_status_changed": false,
+    "r1_fix_status": "APPLIED"
+  },
+  "boundary_flags": {
+    "provider_called": false,
+    "model_called": false,
+    "api_key_configured": false,
+    "real_database_written": false,
+    "database_written": false,
+    "real_memory_written": false,
+    "memory_written": false,
+    "Feishu_written": false,
+    "formal_export_created": false,
+    "real_frontend_runtime_modified": false,
+    "frontend_runtime_modified": false,
+    "production_dependency_installed": false,
+    "real_resource_library_connected": false,
+    "teacher_control_runtime_entered": false,
+    "public_display_runtime_entered": false,
+    "student_side_runtime_entered": false,
+    "production_generation_performed": false,
+    "formal_writeback_performed": false,
+    "formal_apply_performed": false,
+    "auto_teacher_approval_performed": false,
+    "teacher_review_required": true
+  },
+  "validation": {
+    "py_compile": "PASS",
+    "validator_no_arg": "PASS",
+    "validator_root": "PASS",
+    "manifest_minus_zip": [],
+    "zip_minus_manifest": []
+  },
+  "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX"
+}
