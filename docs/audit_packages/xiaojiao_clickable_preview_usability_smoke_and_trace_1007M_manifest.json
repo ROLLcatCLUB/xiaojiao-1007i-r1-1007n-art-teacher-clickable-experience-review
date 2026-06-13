@@ -1,0 +1,20 @@
+{
+  "stage": "1007M_CLICKABLE_PREVIEW_USABILITY_SMOKE_AND_TRACE",
+  "final_status": "XIAOJIAO_CLICKABLE_PREVIEW_USABILITY_SMOKE_AND_TRACE_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_clickable_preview_usability_smoke_and_trace_1007M.zip",
+  "zip_sha256": "53F7273722F094AE80A6F7FDA5266B796394BC2E6B8F44D8E7FABF8AA7D0AE54",
+  "zip_entry_count": 7,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_clickable_preview_usability_smoke_and_trace_1007M.md",
+    "docs/foundation/xiaojiao_clickable_preview_usability_smoke_and_trace_1007M.json",
+    "samples/xiaojiao_clickable_preview_usability_smoke_and_trace_1007M/clickable_preview_smoke_trace_1007M.json",
+    "docs/audit/xiaojiao_clickable_preview_usability_smoke_and_trace_1007M_result.json",
+    "docs/audit/xiaojiao_clickable_preview_usability_smoke_and_trace_1007M_report.md",
+    "scripts/validate_xiaojiao_clickable_preview_usability_smoke_and_trace_1007M.py",
+    "docs/audit_packages/xiaojiao_clickable_preview_usability_smoke_and_trace_1007M_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007M_CLICKABLE_PREVIEW_USABILITY_SMOKE_AND_TRACE_CHECKS_OK"
+}
