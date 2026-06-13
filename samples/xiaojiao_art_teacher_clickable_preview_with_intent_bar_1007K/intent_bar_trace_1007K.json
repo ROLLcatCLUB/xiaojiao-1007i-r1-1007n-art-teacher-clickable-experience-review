@@ -1,0 +1,20 @@
+{
+  "intent_bar_states": [
+    "collapsed",
+    "input",
+    "thinking",
+    "confirm",
+    "done"
+  ],
+  "simple_intents": [
+    "探究短一点",
+    "学习单简单些",
+    "多一点示范"
+  ],
+  "complex_intents": [
+    "重新设计这节课",
+    "换个方向",
+    "大改一下"
+  ],
+  "chat_history_stored": false
+}
