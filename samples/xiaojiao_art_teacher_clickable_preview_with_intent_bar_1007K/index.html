@@ -187,16 +187,136 @@
     .quick { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 4px 0; }
     .quick button { border: 1px solid var(--line); background: var(--soft); color: var(--muted); border-radius: 999px; padding: 6px 10px; font-size: 12px; }
     [data-state-name]::after { content: attr(data-state-name); display: none; }
+    .style-switcher {
+      position: fixed;
+      top: 14px;
+      right: 14px;
+      z-index: 70;
+      display: flex;
+      gap: 4px;
+      padding: 4px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.86);
+      box-shadow: 0 10px 28px rgba(41,37,36,.08);
+      backdrop-filter: blur(12px);
+    }
+    .style-switcher button {
+      border: 0;
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .style-switcher button.active {
+      background: var(--amber);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(217,119,6,.16);
+    }
+    body[data-theme="calm"] {
+      --paper: #f6f8f8;
+      --panel: #ffffff;
+      --ink: #203033;
+      --muted: #52666b;
+      --line: #d9e4e6;
+      --soft: #edf3f4;
+      --amber: #2f7f88;
+      --amber-soft: #edf8f9;
+      --teal: #21745f;
+      --rose: #b83d52;
+    }
+    body[data-theme="calm"] .mark {
+      background: linear-gradient(135deg, #2f7f88, #5fa7a2 54%, #8fbf88);
+      box-shadow: 0 6px 16px rgba(47,127,136,.18);
+    }
+    body[data-theme="calm"] .card.lead {
+      border-color: #bcdcdf;
+      border-left-color: var(--amber);
+      box-shadow: 0 16px 38px rgba(47,127,136,.09);
+    }
+    body[data-theme="calm"] .tag,
+    body[data-theme="calm"] .bubble,
+    body[data-theme="calm"] .hint,
+    body[data-theme="calm"] .segment.hot {
+      border-color: #bcdcdf;
+      color: #225e65;
+    }
+    body[data-theme="calm"] .bubble-label,
+    body[data-theme="calm"] .task b {
+      color: #2f7f88;
+    }
+    body[data-theme="calm"] .timeline-bar .hot,
+    body[data-theme="calm"] .dots span {
+      background: #5fa7a2;
+    }
+    body[data-theme="compact"] {
+      --paper: #f4f5f5;
+      --panel: #ffffff;
+      --ink: #202326;
+      --muted: #555f66;
+      --line: #d7dce0;
+      --soft: #eceff1;
+      --amber: #4b6272;
+      --amber-soft: #eef1f3;
+      --teal: #2b6f58;
+      --rose: #9f3d4c;
+    }
+    body[data-theme="compact"] .page { padding-top: 20px; }
+    body[data-theme="compact"] .card,
+    body[data-theme="compact"] .review-box {
+      border-radius: 16px;
+      box-shadow: none;
+      border-color: #dfe3e6;
+    }
+    body[data-theme="compact"] .card.lead {
+      border-left-color: var(--amber);
+      box-shadow: 0 8px 20px rgba(32,35,38,.06);
+    }
+    body[data-theme="compact"] .panel,
+    body[data-theme="compact"] .related-card,
+    body[data-theme="compact"] .segment,
+    body[data-theme="compact"] .modal,
+    body[data-theme="compact"] .intent-open,
+    body[data-theme="compact"] .intent-card {
+      border-radius: 12px;
+    }
+    body[data-theme="compact"] .mark {
+      border-radius: 10px;
+      background: linear-gradient(135deg, #485563, #66717b);
+      box-shadow: none;
+    }
+    body[data-theme="compact"] h1 { font-size: 25px; }
+    body[data-theme="compact"] .btn { border-radius: 10px; padding: 9px 14px; }
+    body[data-theme="compact"] .intent-collapsed { border-radius: 14px; }
+    body[data-theme="compact"] .tag,
+    body[data-theme="compact"] .bubble,
+    body[data-theme="compact"] .hint,
+    body[data-theme="compact"] .segment.hot {
+      border-color: #cfd6da;
+      color: #40515d;
+    }
+    body[data-theme="compact"] .bubble-label,
+    body[data-theme="compact"] .task b {
+      color: #4b6272;
+    }
     @media (max-width: 760px) {
       .page { padding: 18px 14px 112px; }
       body.intent-open .page { padding-bottom: 280px; }
       .related, .choice-grid { grid-template-columns: 1fr; }
       .top { margin-bottom: 18px; }
       h1 { font-size: 24px; }
+      .style-switcher { left: 50%; right: auto; transform: translateX(-50%); top: 8px; }
+      .top { padding-top: 36px; }
     }
   </style>
 </head>
-<body>
+<body data-theme="minimax">
+  <div class="style-switcher" aria-label="风格切换">
+    <button type="button" data-theme-button="minimax" class="active" onclick="setTheme('minimax')">暖感</button>
+    <button type="button" data-theme-button="calm" onclick="setTheme('calm')">清爽</button>
+    <button type="button" data-theme-button="compact" onclick="setTheme('compact')">紧凑</button>
+  </div>
   <main id="app">
     <section id="entry" class="page" data-state-name="light_entry semantic_confirmation handout_candidate_preview teacher_review_gate">
       <div class="top">
@@ -436,6 +556,15 @@
       intent_bar_state: "collapsed",
       events: []
     };
+    function setTheme(theme) {
+      const safeTheme = ["minimax", "calm", "compact"].includes(theme) ? theme : "minimax";
+      document.body.dataset.theme = safeTheme;
+      document.querySelectorAll("[data-theme-button]").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.themeButton === safeTheme);
+      });
+      try { localStorage.setItem("xiaojiao_1007k_theme", safeTheme); } catch (error) {}
+      log("style_theme_changed:" + safeTheme);
+    }
     const simpleIntents = ["探究短一点","学习单简单些","多一点示范"];
     const complexPattern = /重新|换个|换一个|整体|重做|全部|重新设计|换方向|换个方向|大改/;
     function log(type) {
@@ -457,7 +586,7 @@
       state.deferred = true;
       document.getElementById("deferReply").classList.remove("hidden");
       document.getElementById("entryLeadCard").style.opacity = ".72";
-      document.getElementById("entryActions").innerHTML = '<button class="btn" onclick="go(\\'focus\\')">还是处理一下</button>';
+      document.getElementById("entryActions").innerHTML = `<button class="btn" onclick="go('focus')">还是处理一下</button>`;
       log("defer_current_item");
     }
     function renderFocus() {
@@ -634,6 +763,10 @@
     }
     renderChoices();
     renderRecordOptions();
+    setTheme((() => {
+      try { return localStorage.getItem("xiaojiao_1007k_theme") || "minimax"; }
+      catch (error) { return "minimax"; }
+    })());
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         if (state.current === "semantic") go("focus");
