@@ -9,7 +9,7 @@
       --paper: #fafaf9;
       --panel: #ffffff;
       --ink: #292524;
-      --muted: #78716c;
+      --muted: #57534e;
       --line: #e7e5e4;
       --soft: #f5f5f4;
       --amber: #d97706;
@@ -29,7 +29,8 @@
     button, input { font: inherit; }
     button { cursor: pointer; }
     .hidden { display: none !important; }
-    .page { min-height: 100vh; padding: 26px 24px 112px; }
+    .page { min-height: 100vh; padding: 26px 24px 132px; }
+    body.intent-open .page { padding-bottom: 260px; }
     .center { min-height: calc(100vh - 138px); display: flex; align-items: center; justify-content: center; }
     .wrap { width: min(760px, 100%); margin: 0 auto; }
     .top { max-width: 900px; margin: 0 auto 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
@@ -59,13 +60,19 @@
       background: var(--panel);
       border: 1px solid #f5f5f4;
       border-radius: 28px;
-      box-shadow: 0 10px 30px rgba(41, 37, 36, .04);
+      box-shadow: 0 10px 30px rgba(41, 37, 36, .035);
       padding: 26px;
     }
+    .card.lead {
+      border-color: #fde68a;
+      border-left: 4px solid var(--amber);
+      box-shadow: 0 16px 38px rgba(217,119,6,.10);
+    }
     .panel {
-      background: var(--panel);
-      border: 1px solid #f5f5f4;
-      border-radius: 22px;
+      background: var(--soft);
+      border: 0;
+      box-shadow: none;
+      border-radius: 18px;
       padding: 20px;
     }
     .tag { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 10px; background: var(--amber-soft); color: #b45309; font-size: 12px; }
@@ -83,6 +90,10 @@
       transition: .18s ease;
     }
     .btn:hover { border-color: #d6d3d1; background: #fafaf9; }
+    .btn:focus-visible, input:focus-visible, .choice:focus-visible, .back:focus-visible {
+      outline: 3px solid rgba(217,119,6,.28);
+      outline-offset: 2px;
+    }
     .btn.primary { background: var(--amber); border-color: var(--amber); color: #fff; box-shadow: 0 6px 14px rgba(217,119,6,.16); }
     .btn.primary:hover { background: #b45309; }
     .btn.ghost { border-color: transparent; background: transparent; color: var(--muted); }
@@ -106,10 +117,13 @@
     .goal-list { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 14px; color: #44403c; }
     .goal-list li { display: flex; gap: 8px; }
     .goal-list li::before { content: "·"; color: #f59e0b; font-weight: 700; }
-    .timeline-bar { display: flex; gap: 2px; height: 8px; overflow: hidden; border-radius: 999px; margin: 16px 0; background: #f5f5f4; }
-    .timeline-bar span { background: #e7e5e4; }
+    .timeline-bar { display: flex; gap: 0; height: 10px; overflow: hidden; border-radius: 999px; margin: 16px 0 8px; background: #f5f5f4; border: 1px solid #edeae7; }
+    .timeline-bar span { background: #ddd6d1; border-right: 2px solid #fafaf9; position: relative; }
+    .timeline-bar span:last-child { border-right: 0; }
     .timeline-bar .hot { background: #fbbf24; }
     .timeline-bar .done { background: #99f6e4; }
+    .time-labels { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .time-labels span { font-size: 12px; color: var(--muted); background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 4px 8px; }
     .segment { border-radius: 14px; padding: 13px 16px; background: var(--soft); display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 8px; }
     .segment.hot { background: var(--amber-soft); border: 1px solid #fde68a; }
     .segment.done { background: #f0fdfa; border: 1px solid #ccfbf1; }
@@ -117,6 +131,7 @@
     .related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
     .related-card { border: 1px solid #f5f5f4; background: #fff; border-radius: 18px; padding: 14px; }
     .related-card.active { border-color: #fde68a; }
+    .related-card.disabled { background: #f7f5f2; color: #8f8780; opacity: .72; cursor: default; }
     .choice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin: 8px 0 18px; }
     .choice { border: 1px solid var(--line); background: #fff; border-radius: 14px; padding: 11px 8px; color: #57534e; font-size: 14px; }
     .choice.active { background: var(--amber-soft); border-color: #fcd34d; color: #92400e; }
@@ -128,9 +143,21 @@
     .task b { color: var(--amber); flex: 0 0 auto; }
     .source-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
     .source-tags span { border: 1px solid var(--line); background: #fff; color: var(--muted); padding: 5px 9px; border-radius: 999px; font-size: 12px; }
+    .hint {
+      text-align: left;
+      border-left: 3px solid var(--amber);
+      background: var(--amber-soft);
+      border-radius: 14px;
+      padding: 12px 14px;
+      color: #78350f;
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
     .review-box { background: #fff; border: 1px solid #f5f5f4; border-radius: 28px; padding: 24px; box-shadow: 0 10px 30px rgba(41,37,36,.04); }
     .record-options { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 14px; }
     .record-options button.active { background: #f0fdfa; border-color: #5eead4; color: #0f766e; }
+    .intent-scrim { position: fixed; inset: 0; background: rgba(41,37,36,.08); z-index: 45; opacity: 0; pointer-events: none; transition: opacity .18s ease; }
+    body.intent-open .intent-scrim { opacity: 1; pointer-events: auto; }
     .intent-wrap { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: flex; justify-content: center; padding: 0 16px 16px; pointer-events: none; }
     .intent-inner { width: min(680px, 100%); pointer-events: auto; }
     .intent-pop { display: flex; align-items: flex-end; gap: 12px; margin-bottom: 12px; animation: fadeIn .24s ease; }
@@ -162,6 +189,7 @@
     [data-state-name]::after { content: attr(data-state-name); display: none; }
     @media (max-width: 760px) {
       .page { padding: 18px 14px 112px; }
+      body.intent-open .page { padding-bottom: 280px; }
       .related, .choice-grid { grid-template-columns: 1fr; }
       .top { margin-bottom: 18px; }
       h1 { font-size: 24px; }
@@ -180,7 +208,7 @@
           <p class="muted" style="font-size:14px;margin-bottom:8px;">下午好，张老师</p>
           <h1>今天 3 节课，1 项待你确认</h1>
           <p class="muted" style="font-size:14px;margin-top:8px;">我把最该先看的一件事，放在这儿了。</p>
-          <div class="card" style="margin-top:30px;">
+          <div id="entryLeadCard" class="card lead" style="margin-top:30px;">
             <div class="entry-meta">
               <span class="tag">今日重点</span>
               <span class="muted" style="font-size:13px;">课时设计草稿 · 待确认</span>
@@ -191,7 +219,7 @@
               <span class="mark small">教</span>
               <div class="bubble"><div class="bubble-label">小教建议</div>四年级第 2 课草稿已经生成，第二环节时间可能偏长。要先看一下吗？</div>
             </div>
-            <div class="btns">
+            <div id="entryActions" class="btns">
               <button class="btn primary" onclick="go('focus')">现在处理</button>
               <button class="btn ghost" onclick="deferToday()">稍后</button>
             </div>
@@ -216,8 +244,8 @@
         <h1>《色彩的感觉》</h1>
         <p class="muted" style="font-size:14px;margin-top:5px;">全课 40 分钟 · 共四个环节</p>
 
-        <div class="panel" style="margin-top:24px;">
-          <div class="muted" style="font-size:14px;">教学目标</div>
+          <div class="panel" style="margin-top:24px;">
+          <div class="muted" style="font-size:12px;font-weight:700;letter-spacing:.04em;">教学目标</div>
           <ul class="goal-list">
             <li>感受冷色与暖色带来的不同情绪</li>
             <li>能说出生活中常见的冷暖色</li>
@@ -231,6 +259,7 @@
             <div class="muted" style="font-size:12px;">共 40 分钟</div>
           </div>
           <div class="timeline-bar" id="timebar"></div>
+          <div class="time-labels" id="timeLabels"></div>
           <div id="segments"></div>
         </div>
 
@@ -238,9 +267,14 @@
           <div class="muted" style="font-size:12px;margin-bottom:8px;">这节课还关联着</div>
           <div class="related">
             <div id="handoutCard" class="related-card"><strong>学习单</strong><p id="handoutStatus" class="muted" style="font-size:12px;margin-top:5px;">未生成</p></div>
-            <div class="related-card"><strong>评价量规</strong><p class="muted" style="font-size:12px;margin-top:5px;">待生成</p></div>
-            <div class="related-card"><strong>资源参考</strong><p class="muted" style="font-size:12px;margin-top:5px;">可稍后打开</p></div>
+            <div class="related-card disabled" aria-disabled="true"><strong>评价量规</strong><p class="muted" style="font-size:12px;margin-top:5px;">本轮先不处理</p></div>
+            <div class="related-card disabled" aria-disabled="true"><strong>资源参考</strong><p class="muted" style="font-size:12px;margin-top:5px;">资源选择器未接入</p></div>
           </div>
+        </div>
+        <div class="time-labels" style="margin-top:20px;">
+          <span id="stepDraft">1 草稿确认</span>
+          <span id="stepHandout">2 学习单候选</span>
+          <span id="stepReview">3 教师审核</span>
         </div>
 
         <div class="btns">
@@ -251,8 +285,8 @@
       </div>
     </section>
 
-    <section id="semantic" class="overlay hidden">
-      <div class="modal">
+    <section id="semantic" class="overlay hidden" onclick="go('focus')">
+      <div class="modal" onclick="event.stopPropagation()">
         <div style="display:flex;align-items:flex-start;gap:12px;margin-bottom:20px;">
           <span class="mark small">教</span>
           <div>
@@ -286,7 +320,7 @@
           <h2>《色彩的感觉》学习单</h2>
           <p class="muted" style="font-size:14px;margin-top:6px;">学习目标：感受冷暖色带来的不同情绪</p>
           <div class="dashed"></div>
-          <div id="demoBlock" class="tag hidden" style="display:block;text-align:left;margin-bottom:14px;">示范：老师先指着一张照片说“蓝色让我觉得安静”，再请你试试。</div>
+          <div id="demoBlock" class="hint hidden">示范：老师先指着一张照片说“蓝色让我觉得安静”，再请你试试。</div>
           <div class="task"><b>任务一</b><span id="task1">圈出图片中的冷色和暖色</span></div>
           <div class="task"><b>任务二</b><span id="task2">用 3 个词描述这张图给你的感觉</span></div>
           <div class="task"><b>任务三</b><span>用冷暖对比完成一张小色稿</span></div>
@@ -297,7 +331,7 @@
         <p id="candidateFlash" class="tag ok hidden" style="margin-top:16px;"></p>
         <div class="btns">
           <button class="btn primary" onclick="go('gate')">采用</button>
-          <button class="btn" onclick="flashCandidate('这一页你可以直接改，改好再采用。')">修改一下</button>
+          <button class="btn" onclick="flashCandidate('这份候选可以先暂存，进入真实前端后再做逐项修改。')">修改一下</button>
           <button class="btn" onclick="flashCandidate('已暂存，今天稍后可以接着弄。')">暂存</button>
           <button class="btn ghost" onclick="flashCandidate('好，按原来的设置又帮你整理了一份候选稿。')">重新生成候选</button>
           <button class="btn danger" onclick="state.handout='未生成';renderFocus();go('focus')">放弃</button>
@@ -349,7 +383,8 @@
     </section>
   </main>
 
-  <div class="intent-wrap" id="intentShell">
+  <div id="intentScrim" class="intent-scrim hidden" onclick="resetIntent()"></div>
+  <div class="intent-wrap hidden" id="intentShell">
     <div class="intent-inner">
       <div id="intentPop"></div>
       <button id="intentCollapsed" class="intent-collapsed" onclick="openIntent()">
@@ -391,10 +426,12 @@
       purpose: "课堂练习型",
       difficulty: "正常",
       handout: "未生成",
+      deferred: false,
       worksheetEasy: false,
       worksheetDemo: false,
       teacher_review_required: false,
       formal_apply_performed: false,
+      pendingComplexAction: null,
       process_record_candidate: null,
       intent_bar_state: "collapsed",
       events: []
@@ -409,19 +446,28 @@
       state.current = id;
       if (id === "focus") renderFocus();
       if (id === "candidate") renderCandidate();
+      document.getElementById("intentShell").classList.toggle("hidden", id === "entry" || id === "semantic");
+      if (id === "entry" || id === "semantic") {
+        document.body.classList.remove("intent-open");
+        document.getElementById("intentScrim").classList.add("hidden");
+      }
       log("surface_" + id);
     }
     function deferToday() {
+      state.deferred = true;
       document.getElementById("deferReply").classList.remove("hidden");
+      document.getElementById("entryLeadCard").style.opacity = ".72";
+      document.getElementById("entryActions").innerHTML = '<button class="btn" onclick="go(\\'focus\\')">还是处理一下</button>';
       log("defer_current_item");
     }
     function renderFocus() {
       const bar = document.getElementById("timebar");
-      bar.innerHTML = state.segments.map(s => `<span class="${s.focus && !state.adjusted ? "hot" : state.adjusted && s.focus ? "done" : ""}" style="flex:${s.min}"></span>`).join("");
+      bar.innerHTML = state.segments.map(s => `<span title="${s.name} · ${s.min} 分钟" class="${s.focus && !state.adjusted ? "hot" : state.adjusted && s.focus ? "done" : ""}" style="flex:${s.min}"></span>`).join("");
+      document.getElementById("timeLabels").innerHTML = state.segments.map(s => `<span>${s.name} · ${s.min} 分钟</span>`).join("");
       const segs = document.getElementById("segments");
       segs.innerHTML = state.segments.map((s,i) => {
         const cls = s.focus && !state.adjusted ? "segment hot" : s.focus && state.adjusted ? "segment done" : "segment";
-        const note = s.focus && !state.adjusted ? `<div class="attached-note"><div class="says"><span class="mark small">教</span><div class="bubble">这一段 25 分钟有点撑。要不要我帮你压到 18 分钟，把展示时间留出来？</div></div><div class="btns" style="margin-left:42px;margin-top:10px;"><button class="btn primary" onclick="applyAdjust()">按这个改</button><button class="btn ghost">我自己看</button></div></div>` : "";
+        const note = s.focus && !state.adjusted ? `<div class="attached-note" id="sectionAdvice"><div class="says"><span class="mark small">教</span><div class="bubble">这一段 25 分钟有点撑。要不要我帮你压到 18 分钟，把展示时间留出来？</div></div><div class="btns" style="margin-left:42px;margin-top:10px;"><button class="btn primary" onclick="applyAdjust()">按这个改</button><button class="btn ghost" onclick="dismissAdvice()">我自己看</button></div></div>` : "";
         const done = s.focus && state.adjusted && !state.redesigned ? `<p class="tag ok" style="margin:9px 0 0 14px;">已按建议调整：探究 18 分钟，展示留到 15 分钟。</p>` : "";
         return `<div><div class="${cls}"><span>${i+1}. ${s.name}</span><span>${s.min} 分钟</span></div>${note}${done}</div>`;
       }).join("");
@@ -431,7 +477,15 @@
       document.getElementById("confirmDraftBtn").textContent = state.draftConfirmed ? "✓ 课时草稿已确认" : "确认课时草稿";
       document.getElementById("handoutStatus").textContent = state.handout;
       document.getElementById("handoutCard").classList.toggle("active", state.handout !== "未生成");
+      document.getElementById("stepDraft").className = state.draftConfirmed ? "tag ok" : "tag";
+      document.getElementById("stepHandout").className = state.handout !== "未生成" ? "tag ok" : "tag gray";
+      document.getElementById("stepReview").className = state.teacher_review_required ? "tag ok" : "tag gray";
       document.getElementById("progressText").textContent = "这条线上你已经：看了草稿" + (state.adjusted ? (state.redesigned ? " · 重排了整节课" : " · 调整了探究时间") : "") + (state.draftConfirmed ? " · 确认了课时草稿" : "");
+    }
+    function dismissAdvice() {
+      const advice = document.getElementById("sectionAdvice");
+      if (advice) advice.innerHTML = '<p class="muted" style="font-size:12px;margin:8px 0 0 42px;">好，先放着，你看完再决定。</p>';
+      log("dismiss_section_advice");
     }
     function applyAdjust() {
       state.segments = state.segments.map(s => s.name === "探究" ? { ...s, min: 18, focus: true } : s.name === "展示" ? { ...s, min: 15 } : s);
@@ -452,7 +506,15 @@
     }
     function makeCandidate() {
       state.handout = "候选待确认";
-      go("candidate");
+      showGenerationThinking();
+      setTimeout(() => { go("candidate"); resetIntent(); }, 950);
+    }
+    function showGenerationThinking() {
+      document.getElementById("intentShell").classList.remove("hidden");
+      document.getElementById("intentCollapsed").classList.add("hidden");
+      document.getElementById("intentOpen").classList.add("hidden");
+      document.getElementById("intentPop").innerHTML = `<div class="intent-pop"><span class="mark thinking-mark">教</span><div class="intent-card"><span class="muted" style="font-size:14px;">小教正在整理学习单候选</span><span class="dots"><span></span><span></span><span></span></span></div></div>`;
+      log("generate_candidate_thinking");
     }
     function renderCandidate() {
       document.getElementById("candidateDifficulty").textContent = state.difficulty;
@@ -490,15 +552,20 @@
     }
     function openIntent() {
       state.intent_bar_state = "input";
+      document.body.classList.add("intent-open");
+      document.getElementById("intentScrim").classList.remove("hidden");
       document.getElementById("intentCollapsed").classList.add("hidden");
       document.getElementById("intentOpen").classList.remove("hidden");
       setTimeout(() => document.getElementById("intentInput").focus(), 0);
     }
     function resetIntent() {
       state.intent_bar_state = "collapsed";
+      document.body.classList.remove("intent-open");
+      document.getElementById("intentScrim").classList.add("hidden");
       document.getElementById("intentCollapsed").classList.remove("hidden");
       document.getElementById("intentOpen").classList.add("hidden");
       document.getElementById("intentPop").innerHTML = "";
+      document.getElementById("intentOpen").style.opacity = "1";
       document.getElementById("intentInput").value = "";
     }
     function chooseIntent(v) {
@@ -521,13 +588,15 @@
         showDone(r.understand);
         setTimeout(resetIntent, 2200);
       } else {
+        state.pendingComplexAction = r;
         state.intent_bar_state = "thinking";
         document.getElementById("intentOpen").style.opacity = ".58";
         document.getElementById("intentPop").innerHTML = `<div class="intent-pop"><span class="mark thinking-mark">教</span><div class="intent-card"><span class="muted" style="font-size:14px;">小教在想这件事</span><span class="dots"><span></span><span></span><span></span></span></div></div>`;
         log("intent_bar_complex_thinking:" + t);
         setTimeout(() => {
           state.intent_bar_state = "confirm";
-          document.getElementById("intentPop").innerHTML = `<div class="intent-pop"><span class="mark">教</span><div class="intent-card"><div class="bubble-label">我这样理解，对吗？</div><p style="font-size:14px;line-height:1.7;color:#44403c;">${r.understand}</p><div class="btns" style="margin-top:12px;"><button class="btn primary" onclick="confirmComplex('${r.action}','${r.understand.replace(/'/g,"")}')">对，去做</button><button class="btn ghost" onclick="document.getElementById('intentOpen').style.opacity='1';document.getElementById('intentPop').innerHTML='';state.intent_bar_state='input'">我再说说</button></div></div></div>`;
+          const warning = r.action === "redesign" && state.draftConfirmed ? `<p class="tag" style="margin-top:10px;">这会重排整节课，并把“已确认草稿”退回待确认。</p>` : "";
+          document.getElementById("intentPop").innerHTML = `<div class="intent-pop"><span class="mark">教</span><div class="intent-card"><div class="bubble-label">我这样理解，对吗？</div><p style="font-size:14px;line-height:1.7;color:#44403c;">${r.understand}</p>${warning}<div class="btns" style="margin-top:12px;"><button class="btn primary" onclick="confirmComplex()">对，去做</button><button class="btn ghost" onclick="document.getElementById('intentOpen').style.opacity='1';document.getElementById('intentPop').innerHTML='';state.intent_bar_state='input'">我再说说</button></div></div></div>`;
         }, 900);
       }
     }
@@ -549,10 +618,13 @@
       }
       log("intent_action:" + action);
     }
-    function confirmComplex(action, understand) {
+    function confirmComplex() {
+      const pending = state.pendingComplexAction;
+      if (!pending) return;
       document.getElementById("intentOpen").style.opacity = "1";
-      applyIntentAction(action);
-      showDone(understand);
+      applyIntentAction(pending.action);
+      showDone(pending.understand);
+      state.pendingComplexAction = null;
       setTimeout(resetIntent, 2200);
     }
     function showDone(text) {
@@ -562,6 +634,12 @@
     }
     renderChoices();
     renderRecordOptions();
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        if (state.current === "semantic") go("focus");
+        else resetIntent();
+      }
+    });
     log("open_workbench");
   </script>
 </body>
