@@ -33,5 +33,8 @@
     "manifest_minus_zip": [],
     "zip_minus_manifest": []
   },
-  "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX"
+  "next_stage": "1007N_REVIEW_PENDING_BEFORE_REAL_FRONTEND_AND_PROVIDER_SANDBOX",
+  "reference_style_patch": "1007K_R1_INTENT_BAR_REFERENCE_STYLE_APPLIED",
+  "reference_style_patch_scope": "index_html_only_plus_zip_readme_sha_refresh",
+  "teacher_facing_style_updated": true
 }
