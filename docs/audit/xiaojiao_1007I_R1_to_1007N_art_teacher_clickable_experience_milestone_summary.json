@@ -29,11 +29,12 @@
       "slug": "xiaojiao_art_teacher_clickable_preview_with_intent_bar_1007K",
       "final_status": "XIAOJIAO_ART_TEACHER_CLICKABLE_PREVIEW_WITH_INTENT_BAR_PASS",
       "zip_entry_count": 10,
-      "zip_sha256": "AE169D22536763B447CC3C0CFE717F5FE825E282D0D3B2D141A6A247FEC897F5",
+      "zip_sha256": "C4CD787432EF20F7AA77DA1AE522D92AB02D673F1CB45396BC24D877276678BF",
       "validator_no_arg": "PASS",
       "validator_root": "PASS",
       "manifest_minus_zip": [],
-      "zip_minus_manifest": []
+      "zip_minus_manifest": [],
+      "reference_style_patch": "1007K_R1_INTENT_BAR_REFERENCE_STYLE_APPLIED"
     },
     {
       "stage": "1007L",
