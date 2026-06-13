@@ -1,0 +1,20 @@
+{
+  "stage": "1007N_ART_TEACHER_REAL_EXPERIENCE_MILESTONE_REVIEW_PACKAGE",
+  "final_status": "XIAOJIAO_ART_TEACHER_REAL_EXPERIENCE_MILESTONE_REVIEW_PACKAGE_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_art_teacher_real_experience_milestone_review_package_1007N.zip",
+  "zip_sha256": "D2714ADE0B57D343822EA32D8AFEE5AB11CE48C21C7054994B066440F7882A63",
+  "zip_entry_count": 7,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_art_teacher_real_experience_milestone_review_package_1007N.md",
+    "docs/foundation/xiaojiao_art_teacher_real_experience_milestone_review_package_1007N.json",
+    "samples/xiaojiao_art_teacher_real_experience_milestone_review_package_1007N/real_experience_milestone_1007N.json",
+    "docs/audit/xiaojiao_art_teacher_real_experience_milestone_review_package_1007N_result.json",
+    "docs/audit/xiaojiao_art_teacher_real_experience_milestone_review_package_1007N_report.md",
+    "scripts/validate_xiaojiao_art_teacher_real_experience_milestone_review_package_1007N.py",
+    "docs/audit_packages/xiaojiao_art_teacher_real_experience_milestone_review_package_1007N_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007N_ART_TEACHER_REAL_EXPERIENCE_MILESTONE_REVIEW_PACKAGE_CHECKS_OK"
+}
