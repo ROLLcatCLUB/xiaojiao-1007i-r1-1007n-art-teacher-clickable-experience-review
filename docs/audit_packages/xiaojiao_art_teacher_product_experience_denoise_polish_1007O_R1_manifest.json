@@ -1,0 +1,22 @@
+{
+  "stage": "1007O_R1_ART_TEACHER_PRODUCT_EXPERIENCE_DENOISE_POLISH",
+  "final_status": "XIAOJIAO_ART_TEACHER_PRODUCT_EXPERIENCE_DENOISE_POLISH_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1.zip",
+  "zip_sha256": "D359E3123DF66DFC4AB96CBB09EC0DE7E63B43B25AE18234C23576702EB5F278",
+  "zip_entry_count": 9,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1.md",
+    "docs/foundation/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1.json",
+    "samples/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1/index.html",
+    "samples/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1/denoise_notes_1007O_R1.json",
+    "samples/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1/experience_trace_1007O_R1.json",
+    "docs/audit/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1_result.json",
+    "docs/audit/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1_report.md",
+    "scripts/validate_xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1.py",
+    "docs/audit_packages/xiaojiao_art_teacher_product_experience_denoise_polish_1007O_R1_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007O_R1_ART_TEACHER_PRODUCT_EXPERIENCE_DENOISE_POLISH_CHECKS_OK"
+}

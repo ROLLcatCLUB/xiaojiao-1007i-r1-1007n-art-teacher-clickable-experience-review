@@ -1,0 +1,27 @@
+{
+  "stage": "1007O_R1_ART_TEACHER_PRODUCT_EXPERIENCE_DENOISE_POLISH",
+  "source_stage": "1007O_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH",
+  "scope": "preview_only_product_experience_denoise_polish",
+  "denoise_focus": [
+    "copy_compression",
+    "weaker_agent_notes",
+    "lower_explanatory_text",
+    "quieter_visual_weight",
+    "intent_bar_kept_as_light_intent_channel",
+    "candidate_review_copy_shortened",
+    "teacher_review_gate_copy_shortened",
+    "light_recording_tags_reduced",
+    "style_presets_retained_for_visual_comparison"
+  ],
+  "not_changed": [
+    "business_flow",
+    "real_frontend_runtime",
+    "provider_model",
+    "database_memory_feishu",
+    "resource_library",
+    "classroom_studio",
+    "student_side"
+  ],
+  "teacher_review_required": true,
+  "formal_apply_performed": false
+}

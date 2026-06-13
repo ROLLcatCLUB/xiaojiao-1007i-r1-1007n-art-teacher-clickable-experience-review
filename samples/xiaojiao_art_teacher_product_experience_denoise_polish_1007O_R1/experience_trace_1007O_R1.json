@@ -1,0 +1,77 @@
+{
+  "stage": "1007O_R1_ART_TEACHER_PRODUCT_EXPERIENCE_DENOISE_POLISH",
+  "trace_type": "product_experience_static_trace",
+  "flow": [
+    {
+      "step": 1,
+      "surface": "light_entry",
+      "teacher_action": "open_preview",
+      "expected_feeling": "today_priority_is_clear"
+    },
+    {
+      "step": 2,
+      "surface": "light_entry",
+      "teacher_action": "click_now_handle",
+      "expected_feeling": "one_primary_action"
+    },
+    {
+      "step": 3,
+      "surface": "lesson_focus",
+      "teacher_action": "review_lesson_draft",
+      "expected_feeling": "one_lesson_is_current_work_object"
+    },
+    {
+      "step": 4,
+      "surface": "intent_bar",
+      "teacher_action": "say_shorten_inquiry",
+      "expected_feeling": "light_intent_not_chat"
+    },
+    {
+      "step": 5,
+      "surface": "semantic_confirmation",
+      "teacher_action": "select_purpose_and_difficulty",
+      "expected_feeling": "choice_based_semantic_capture"
+    },
+    {
+      "step": 6,
+      "surface": "candidate_preview",
+      "teacher_action": "review_candidate",
+      "expected_feeling": "candidate_not_formal_material"
+    },
+    {
+      "step": 7,
+      "surface": "teacher_review_gate",
+      "teacher_action": "confirm_or_save",
+      "expected_feeling": "teacher_has_final_control"
+    },
+    {
+      "step": 8,
+      "surface": "light_recording",
+      "teacher_action": "tap_one_note",
+      "expected_feeling": "natural_not_form_filling"
+    }
+  ],
+  "boundary_flags": {
+    "provider_called": false,
+    "model_called": false,
+    "api_key_configured": false,
+    "real_database_written": false,
+    "database_written": false,
+    "real_memory_written": false,
+    "memory_written": false,
+    "Feishu_written": false,
+    "formal_export_created": false,
+    "real_frontend_runtime_modified": false,
+    "frontend_runtime_modified": false,
+    "production_dependency_installed": false,
+    "real_resource_library_connected": false,
+    "teacher_control_runtime_entered": false,
+    "public_display_runtime_entered": false,
+    "student_side_runtime_entered": false,
+    "production_generation_performed": false,
+    "formal_writeback_performed": false,
+    "formal_apply_performed": false,
+    "auto_teacher_approval_performed": false,
+    "teacher_review_required": true
+  }
+}

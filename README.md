@@ -80,3 +80,26 @@ Bar details, handout candidate review feeling, teacher review gate clarity, and
 light recording naturalness. It does not add provider/model, database, memory,
 Feishu, formal export, real frontend runtime, resource library, classroom
 studio, student side, public display, or production dependency.
+
+## 1007O_R1 Denoise Product Experience Polish
+
+```text
+stage=1007O_R1_ART_TEACHER_PRODUCT_EXPERIENCE_DENOISE_POLISH
+final_status=XIAOJIAO_ART_TEACHER_PRODUCT_EXPERIENCE_DENOISE_POLISH_PASS
+validator no-arg=PASS
+validator --root=PASS
+JS syntax check=PASS
+fresh archive review tree validator=PASS
+ZIP_ENTRY_COUNT=9
+ZIP_SHA256=D359E3123DF66DFC4AB96CBB09EC0DE7E63B43B25AE18234C23576702EB5F278
+manifest_minus_zip=[]
+zip_minus_manifest=[]
+raw index.html=200
+caveat=DENOISE_PREVIEW_ONLY_NOT_REAL_FRONTEND_RUNTIME
+next_stage=1007O_R1_REVIEW_PENDING_BEFORE_REAL_FRONTEND_PREVIEW_ROUTE
+```
+
+1007O_R1 keeps the 1007O flow and only does subtraction: shorter copy, quieter
+Xiaojiao prompts, weaker explanatory text, calmer candidate/review areas, three
+Intent Bar quick phrases, and reduced light-recording tags. It does not add new
+business capability or enter real frontend/provider/runtime.
