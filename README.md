@@ -55,3 +55,28 @@ real_frontend_modified=false
 style_presets=minimax,calm,compact
 real_frontend_modified=false
 ```
+
+## 1007O Product Experience Polish
+
+```text
+stage=1007O_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH
+final_status=XIAOJIAO_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH_PASS
+validator no-arg=PASS
+validator --root=PASS
+JS syntax check=PASS
+fresh archive review tree validator=PASS
+ZIP_ENTRY_COUNT=9
+ZIP_SHA256=987827EEC5941DE77198C741BADC4B168A5CD78CF54466E8E1DC242CD04CE1ED
+manifest_minus_zip=[]
+zip_minus_manifest=[]
+raw index.html=200
+caveat=PREVIEW_ONLY_NOT_REAL_FRONTEND_RUNTIME
+next_stage=1007O_REVIEW_PENDING_BEFORE_REAL_FRONTEND_PREVIEW_ROUTE
+```
+
+1007O keeps the accepted art teacher daily work flow and only polishes product
+experience details: light entry priority, lesson focus visual hierarchy, Intent
+Bar details, handout candidate review feeling, teacher review gate clarity, and
+light recording naturalness. It does not add provider/model, database, memory,
+Feishu, formal export, real frontend runtime, resource library, classroom
+studio, student side, public display, or production dependency.

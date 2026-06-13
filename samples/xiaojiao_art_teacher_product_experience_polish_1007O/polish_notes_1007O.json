@@ -1,0 +1,27 @@
+{
+  "stage": "1007O_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH",
+  "source_stage": "1007K_ART_TEACHER_CLICKABLE_PREVIEW_WITH_INTENT_BAR",
+  "scope": "preview_only_product_experience_polish",
+  "polish_focus": [
+    "light_entry_priority_weight",
+    "lesson_focus_paper_like_structure",
+    "intent_bar_kept_as_light_intent_channel",
+    "semantic_confirmation_copy_simplified",
+    "candidate_review_material_weight",
+    "button_hierarchy_rebalanced",
+    "teacher_review_gate_authority_clarified",
+    "light_recording_copy_softened",
+    "style_presets_retained_for_visual_comparison"
+  ],
+  "not_changed": [
+    "business_flow",
+    "real_frontend_runtime",
+    "provider_model",
+    "database_memory_feishu",
+    "resource_library",
+    "classroom_studio",
+    "student_side"
+  ],
+  "teacher_review_required": true,
+  "formal_apply_performed": false
+}

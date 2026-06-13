@@ -1,0 +1,22 @@
+{
+  "stage": "1007O_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH",
+  "final_status": "XIAOJIAO_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_art_teacher_product_experience_polish_1007O.zip",
+  "zip_sha256": "987827EEC5941DE77198C741BADC4B168A5CD78CF54466E8E1DC242CD04CE1ED",
+  "zip_entry_count": 9,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_art_teacher_product_experience_polish_1007O.md",
+    "docs/foundation/xiaojiao_art_teacher_product_experience_polish_1007O.json",
+    "samples/xiaojiao_art_teacher_product_experience_polish_1007O/index.html",
+    "samples/xiaojiao_art_teacher_product_experience_polish_1007O/polish_notes_1007O.json",
+    "samples/xiaojiao_art_teacher_product_experience_polish_1007O/experience_trace_1007O.json",
+    "docs/audit/xiaojiao_art_teacher_product_experience_polish_1007O_result.json",
+    "docs/audit/xiaojiao_art_teacher_product_experience_polish_1007O_report.md",
+    "scripts/validate_xiaojiao_art_teacher_product_experience_polish_1007O.py",
+    "docs/audit_packages/xiaojiao_art_teacher_product_experience_polish_1007O_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007O_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH_CHECKS_OK"
+}
