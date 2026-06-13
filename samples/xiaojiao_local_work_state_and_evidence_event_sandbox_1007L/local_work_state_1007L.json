@@ -1,0 +1,12 @@
+{
+  "current_surface": "teacher_review_gate",
+  "current_lesson": "lesson_L004_color_feeling",
+  "lesson_draft_status": "pending_teacher_review",
+  "inquiry_section_minutes": 18,
+  "display_section_minutes": 14,
+  "handout_status": "candidate_patch_pending_review",
+  "handout_difficulty": "simple",
+  "teacher_review_required": true,
+  "final_status": "preview_only_not_applied",
+  "process_note_candidate": "学生兴趣高，展示时间需要保留。"
+}
