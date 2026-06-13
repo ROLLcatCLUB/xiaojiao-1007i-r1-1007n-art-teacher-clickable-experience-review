@@ -49,5 +49,12 @@
     "timeline_labels",
     "intent_open_scrim_and_padding",
     "focus_visible_and_esc_close"
-  ]
+  ],
+  "style_preset_switcher": "1007K_R3_STYLE_PRESET_SWITCHER_APPLIED",
+  "style_presets": [
+    "minimax",
+    "calm",
+    "compact"
+  ],
+  "style_switcher_scope": "css_theme_tokens_and_preview_shell_only"
 }
