@@ -1,0 +1,32 @@
+{
+  "stage": "1007K_R2_LOCAL_INTERACTION_FIX_SYNC",
+  "final_status": "XIAOJIAO_1007K_R2_LOCAL_INTERACTION_FIX_SYNC_PASS",
+  "decision": "SYNC_RECORDED",
+  "created_on": "2026-06-14",
+  "scope": "record the local JS syntax interaction fix sync for 1007K clickable preview",
+  "index_html_sha256": "312FDDF5881FE91B2FE0B5CC04EAE8E4E75E60888642DC2B8FFEB9E42E674920",
+  "current_1007K_zip_sha256": "95306E2ACFCBF6E1D82EAFF7FE8EE2217AC6A24C498BF596015F5F4D1C0B09A7",
+  "current_remote_note": "The current remote contains the R2 interaction fix and later R3 style preset switcher. Business workflow remains unchanged.",
+  "checks": {
+    "js_syntax_check": "PASS",
+    "validator_no_arg": "PASS",
+    "validator_root": "PASS",
+    "raw_index_html": "PENDING_REMOTE_VERIFY",
+    "fresh_archive_validator_no_arg": "PENDING_REMOTE_VERIFY",
+    "fresh_archive_validator_root": "PENDING_REMOTE_VERIFY"
+  },
+  "boundary_flags": {
+    "provider_called": false,
+    "model_called": false,
+    "api_key_configured": false,
+    "database_written": false,
+    "memory_written": false,
+    "Feishu_written": false,
+    "formal_export_created": false,
+    "real_frontend_runtime_modified": false,
+    "dependency_installed": false,
+    "new_business_capability_added": false,
+    "entered_1010A": false
+  },
+  "next_stage": "1007O_ART_TEACHER_PRODUCT_EXPERIENCE_POLISH_PENDING_REVIEW"
+}
