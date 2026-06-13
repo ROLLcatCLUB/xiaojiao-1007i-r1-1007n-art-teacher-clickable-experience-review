@@ -1,0 +1,40 @@
+import argparse, json, sys, zipfile
+from pathlib import Path
+SLUG="xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync"
+EXPECTED_STATUS="XIAOJIAO_1007I_R1_SHA_RECORD_SYNC_FIX_PASS"
+EXPECTED_MARKER="ALL_1007I_R1_SHA_RECORD_SYNC_FIX_CHECKS_OK"
+REQUIRED_FILES=["docs/foundation/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.md", "docs/foundation/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.json", "docs/audit/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync_result.json", "docs/audit/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync_report.md", "scripts/validate_xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.py", "docs/audit_packages/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync_manifest.json", "docs/audit_packages/xiaojiao_art_teacher_business_pack_productized_preview_1007I_R1_sha_record_sync.zip"]
+FALSE_FLAGS=["provider_called","model_called","api_key_configured","real_database_written","database_written","real_memory_written","memory_written","Feishu_written","formal_export_created","real_frontend_runtime_modified","frontend_runtime_modified","production_dependency_installed","real_resource_library_connected","teacher_control_runtime_entered","public_display_runtime_entered","student_side_runtime_entered","production_generation_performed","formal_writeback_performed","formal_apply_performed","auto_teacher_approval_performed"]
+FORBIDDEN=[".env","token","secret","key","node_modules","__pycache__",".db",".sqlite","dist","build","coverage",".DS_Store"]
+def fail(m): print("VALIDATION_FAILED: "+m); sys.exit(1)
+def rel_ok(p): return not (p.startswith("/") or p.startswith("\\") or (len(p)>1 and p[1]==":")) and "\\" not in p
+def forbidden(p): return any(x.lower() in p.lower() for x in FORBIDDEN)
+def main():
+ p=argparse.ArgumentParser(); p.add_argument("--root",default="."); a=p.parse_args(); root=Path(a.root).resolve()
+ for r in REQUIRED_FILES:
+  if not rel_ok(r): fail("bad required path "+r)
+  if forbidden(r): fail("forbidden required path "+r)
+  if not (root/r).exists(): fail("missing required file "+r)
+ result=json.loads((root/f"docs/audit/{SLUG}_result.json").read_text(encoding="utf-8"))
+ if result.get("final_status")!=EXPECTED_STATUS or result.get("pass") is not True: fail("bad result")
+ if result.get("marker")!=EXPECTED_MARKER: fail("bad marker")
+ flags=result.get("boundary_flags",{})
+ for f in FALSE_FLAGS:
+  if flags.get(f) is not False: fail("unsafe boundary flag "+f)
+ if flags.get("teacher_review_required") is not True: fail("teacher_review_required must be true")
+ manifest=json.loads((root/f"docs/audit_packages/{SLUG}_manifest.json").read_text(encoding="utf-8"))
+ with zipfile.ZipFile(root/f"docs/audit_packages/{SLUG}.zip") as z: entries=sorted(z.namelist())
+ for e in entries:
+  if not rel_ok(e): fail("bad zip entry "+e)
+  if forbidden(e): fail("forbidden zip entry "+e)
+ expected=sorted(manifest.get("zip_entries",[]))
+ if sorted(set(expected)-set(entries)) or sorted(set(entries)-set(expected)): fail("manifest/zip mismatch")
+ if manifest.get("zip_entry_count")!=len(entries): fail("zip count mismatch")
+ if manifest.get("manifest_minus_zip")!=[] or manifest.get("zip_minus_manifest")!=[]: fail("manifest diffs not empty")
+ text="\n".join((root/r).read_text(encoding="utf-8", errors="ignore") for r in REQUIRED_FILES if r.endswith((".json",".md",".html")))
+ for term in ["XIAOJIAO_1007I_R1_SHA_RECORD_SYNC_FIX_PASS", "teacher_review_required", "business_preview_content_changed", "r1_fix_status"]:
+  if term not in text: fail("missing term "+term)
+ for term in []:
+  if term in text: fail("forbidden term "+term)
+ print(EXPECTED_MARKER)
+if __name__=="__main__": main()
