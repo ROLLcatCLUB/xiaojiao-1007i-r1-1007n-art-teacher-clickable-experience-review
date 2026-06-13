@@ -1,0 +1,22 @@
+{
+  "stage": "1007L_LOCAL_WORK_STATE_AND_EVIDENCE_EVENT_SANDBOX",
+  "final_status": "XIAOJIAO_LOCAL_WORK_STATE_AND_EVIDENCE_EVENT_SANDBOX_PASS",
+  "zip_path": "docs/audit_packages/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L.zip",
+  "zip_sha256": "59C9DF5D3CE234219A371FA8B602040FCD653F334884F1A1AADBE12439860951",
+  "zip_entry_count": 9,
+  "zip_entries": [
+    "docs/foundation/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L.md",
+    "docs/foundation/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L.json",
+    "samples/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L/local_work_state_1007L.json",
+    "samples/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L/event_log_1007L.json",
+    "samples/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L/evidence_events_1007L.json",
+    "docs/audit/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L_result.json",
+    "docs/audit/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L_report.md",
+    "scripts/validate_xiaojiao_local_work_state_and_evidence_event_sandbox_1007L.py",
+    "docs/audit_packages/xiaojiao_local_work_state_and_evidence_event_sandbox_1007L_manifest.json"
+  ],
+  "manifest_minus_zip": [],
+  "zip_minus_manifest": [],
+  "forbidden_files_present": [],
+  "marker": "ALL_1007L_LOCAL_WORK_STATE_AND_EVIDENCE_EVENT_SANDBOX_CHECKS_OK"
+}
